@@ -1,0 +1,2 @@
+# CPP Practice Programs
+This repository contains my C++ practice programs, starting from fundamentals and progressing to advanced concepts. Each file is numbered and named for clarity (e.g., 1st_greeting.cpp, 2nd_calculation.cpp). The repository is updated regularly with new programs, improved versions of existing ones, and practical enhancements to classic problems. Categories include conditions, loops, arrays, OOP, and DSA, documenting my continuous learning journey.
