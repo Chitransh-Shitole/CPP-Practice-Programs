@@ -32,19 +32,19 @@ int main()
     {
         cout << "Grade : A+ ( Outstanding! )" << endl ; 
     }
-    if ( Percent >= 60 && Percent < 80 )
+    else if ( Percent >= 60 && Percent < 80 )
     {
         cout << "Grade : A ( Excellent! )" << endl ; 
     }
-    if ( Percent >= 50 && Percent < 60 )
+    else if ( Percent >= 50 && Percent < 60 )
     {
         cout << "Grade : B ( Good, Can Do Better. )" << endl ; 
     }
-    if ( Percent >= 33 && Percent < 50 )
+    else if ( Percent >= 33 && Percent < 50 )
     {
         cout << "Grade : C ( Needs to Focus Strictly! )" << endl ; 
     }
-    if ( Percent >= 0 && Percent < 33 )
+    else if ( Percent >= 0 && Percent < 33 )
     {
         cout << "Grade : F ( You Failed )" << endl ; 
     }
