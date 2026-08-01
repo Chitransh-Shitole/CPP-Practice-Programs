@@ -14,7 +14,7 @@ int main ()
     for ( i = 0 ; i < n ; i++ )
     {
         //COUT FIRST BECAUSE SEQUENCE STARTS FROM 0 ( SUM = 0 )
-        cout << sum << "\t" ;
+        cout << a << "\t" ;
 
         //FIBONACCI SERIES LOGIC
         sum = a + b ; 
