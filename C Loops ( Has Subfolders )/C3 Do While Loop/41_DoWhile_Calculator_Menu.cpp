@@ -6,20 +6,25 @@ int main ()
     int num1, num2 ;
     char action ;
 
-    do
+    do //EXECUTES THE BODY ATLEAST ONCE - THEN CHECKS THE CONDITION ( LINE 79 ) 
     {
+        cout << "This Program has calculation menu made using Do-While Loop" << endl << endl ;
+     
+        //MENU VISUALS
         cout << "==================================" << endl ;
-        cout << "|   1.  a   ->  Addition         |" << endl ;
-        cout << "|   2.  b   ->  Subtraction      |" << endl ;
-        cout << "|   3.  c   ->  Multiplication   |" << endl ;
-        cout << "|   4.  d   ->  Division         |" << endl ;
+        cout << "|    a   ->    Addition          |" << endl ;
+        cout << "|    b   ->    Subtraction       |" << endl ;
+        cout << "|    c   ->    Multiplication    |" << endl ;
+        cout << "|    d   ->    Division          |" << endl ;
+        cout << "|    x   ->    Terminate         |" << endl ;
         cout << "==================================" << endl ;
 
         cout << "\nYour Choice : " ;
-        cin >> action ;
+        cin >> action ; //USERS CHOICE ( CAN BE a, b, c, d, x )
 
         switch ( action )
         {
+            //ADDITION CASE
             case 'a' :
             {
                 cout << "Addition ------------ " << endl ;
@@ -28,9 +33,9 @@ int main ()
                 cout << "Enter 2nd Number : " ; 
                 cin >> num2 ;
                 cout << "Addition : " << num1 + num2 << endl ;
-                cout << endl ;
                 break ;
             }
+            //SUBTRACTION CASE
             case 'b' :
             {
                 cout << "Subtraction ------------ " << endl ;
@@ -42,6 +47,7 @@ int main ()
                 cout << endl ;
                 break ;
             }
+            //MULTIPLICATION CASE
             case 'c' :
             {
                 cout << "Multiplication ------------ " << endl ;
@@ -53,6 +59,7 @@ int main ()
                 cout << endl ;
                 break ;
             }
+            //DIVISION CASE
             case 'd' :
             {
                 cout << "Division ------------ " << endl ;
@@ -64,17 +71,20 @@ int main ()
                 cout << endl ;
                 break ;
             }
+            //PROGRAM TERMINATION PROGRAM CASE
             case 'x' : 
             {
                 cout << "Menu Closed --- Program Completed" << endl ;
                 break ;
             }
+            /*DEFAULT CASE - ENTERING ANY OTHER CHARACTER WHICH IS NOT LISTED IN SWITCH WILL EXECUTE THIS BODY
+            IN THIS CASE, ENTERING A CHARACTER WHICH IS NOT LISTED WILL NOT DO ANYTHING*/
             default :
             {
-                cout << "Wrong Input --- Press Enter & Try again" << endl ;
+                cout << "Wrong Input --- Press Enter & Try again" << endl ; //THIS IS AN EXAMPLE TOO
                 cout << endl ;
             }
         }
-    } while ( action != 'x' );
+    } while ( action != 'x' ); //THIS IS THE LOOP CONDITION - TOLD YA!
     return 0 ;
 }
