@@ -4,25 +4,26 @@ using namespace std;
 int main ()
 {
     int num1, num2 ;
-    char action ;
+    char act1 ;
 
+    cout << "This Program has calculation menu made using Do-While Loop" << endl << endl ;
     do //EXECUTES THE BODY ATLEAST ONCE - THEN CHECKS THE CONDITION ( LINE 79 ) 
     {
-        cout << "This Program has calculation menu made using Do-While Loop" << endl << endl ;
-     
         //MENU VISUALS
-        cout << "==================================" << endl ;
+        cout << "+================================+" << endl ;
+        cout << "|         PROGRAM  MENU          |" << endl ;
+        cout << "|================================|" << endl ;
         cout << "|    a   ->    Addition          |" << endl ;
         cout << "|    b   ->    Subtraction       |" << endl ;
         cout << "|    c   ->    Multiplication    |" << endl ;
         cout << "|    d   ->    Division          |" << endl ;
-        cout << "|    x   ->    Terminate         |" << endl ;
-        cout << "==================================" << endl ;
+        cout << "|    n   ->    Terminate         |" << endl ;
+        cout << "+================================+" << endl ;
 
         cout << "\nYour Choice : " ;
-        cin >> action ; //USERS CHOICE ( CAN BE a, b, c, d, x )
+        cin >> act1 ; //USERS CHOICE ( CAN BE a, b, c, d, n )
 
-        switch ( action )
+        switch ( act1 )
         {
             //ADDITION CASE
             case 'a' :
@@ -32,8 +33,33 @@ int main ()
                 cin >> num1 ;
                 cout << "Enter 2nd Number : " ; 
                 cin >> num2 ;
-                cout << "Addition : " << num1 + num2 << endl ;
-                break ;
+                cout << "Addition : " << num1 + num2 << endl << endl ;
+                
+                //FOLLOW UP
+                cout << "Do you want to Perform more calculations? ( y to restart / n to close )" << endl ;
+                cin >> act1 ;
+                //INTERNAL SWITCH CASE
+                switch ( act1 )
+                {
+                    case 'y' :
+                    {
+                        system("cls"); //CLEARS THE TERMINAL 
+                        break ;
+                    }
+                    case 'n' :
+                    {
+                        cout << "Menu Closed --- Program Completed" << endl ;
+                        break ;
+                    }
+                    default :
+                    {
+                        system("cls") ;
+                        cout << "Nevermind, I'll Restart it myself" << endl ;
+                        break ;
+                    }
+                }
+                break;
+
             }
             //SUBTRACTION CASE
             case 'b' :
@@ -45,7 +71,31 @@ int main ()
                 cin >> num2 ;
                 cout << "Subtraction : " << num1 - num2 << endl ;
                 cout << endl ;
-                break ;
+                
+                //FOLLOW UP
+                cout << "Do you want to Perform more calculations? ( y to restart / n to close )" << endl ;
+                cin >> act1 ;
+                //INTERNAL SWITCH CASE
+                switch ( act1 )
+                {
+                    case 'y' :
+                    {
+                        system("cls"); //CLEARS THE TERMINAL 
+                        break ;
+                    }
+                    case 'n' :
+                    {
+                        cout << "Menu Closed --- Program Completed" << endl ;
+                        break ;
+                    }
+                    default :
+                    {
+                        system("cls") ;
+                        cout << "Nevermind, I'll Restart it myself" << endl ;
+                        break ;
+                    }
+                }
+                break;
             }
             //MULTIPLICATION CASE
             case 'c' :
@@ -57,7 +107,31 @@ int main ()
                 cin >> num2 ;
                 cout << "Multiplication : " << num1 * num2 << endl  ;
                 cout << endl ;
-                break ;
+                
+                //FOLLOW UP
+                cout << "Do you want to Perform more calculations? ( y to restart / n to close )" << endl ;
+                cin >> act1 ;
+                //INTERNAL SWITCH CASE
+                switch ( act1 )
+                {
+                    case 'y' :
+                    {
+                        system("cls"); //CLEARS THE TERMINAL 
+                        break ;
+                    }
+                    case 'n' :
+                    {
+                        cout << "Menu Closed --- Program Completed" << endl ;
+                        break ;
+                    }
+                    default :
+                    {
+                        system("cls") ;
+                        cout << "Nevermind, I'll Restart it myself" << endl ;
+                        break ;
+                    }
+                }
+                break;
             }
             //DIVISION CASE
             case 'd' :
@@ -69,10 +143,34 @@ int main ()
                 cin >> num2 ;
                 cout << "Division : " << num1 / num2 << "\tRemainder : " << num1%num2 << endl ;
                 cout << endl ;
-                break ;
+                
+                //FOLLOW UP
+                cout << "Do you want to Perform more calculations? ( y to restart / n to close )" << endl ;
+                cin >> act1 ;
+                //INTERNAL SWITCH CASE
+                switch ( act1 )
+                {
+                    case 'y' :
+                    {
+                        system("cls"); //CLEARS THE TERMINAL 
+                        break ;
+                    }
+                    case 'n' :
+                    {
+                        cout << "Menu Closed --- Program Completed" << endl ;
+                        break ;
+                    }
+                    default :
+                    {
+                        system("cls") ;
+                        cout << "Nevermind, I'll Restart it myself" << endl ;
+                        break ;
+                    }
+                }
+                break;
             }
             //PROGRAM TERMINATION PROGRAM CASE
-            case 'x' : 
+            case 'n' : 
             {
                 cout << "Menu Closed --- Program Completed" << endl ;
                 break ;
@@ -81,10 +179,27 @@ int main ()
             IN THIS CASE, ENTERING A CHARACTER WHICH IS NOT LISTED WILL NOT DO ANYTHING*/
             default :
             {
-                cout << "Wrong Input --- Press Enter & Try again" << endl ; //THIS IS AN EXAMPLE TOO
-                cout << endl ;
+                cout << "Wrong Input --- Press (r) to Try again" << endl ;
+                cin >> act1 ;
+
+                //SWITCH CASE HAD AN EXTRA MARITAL AFFAIR
+                switch ( act1 ) 
+                {
+                    case 'r' :
+                    {
+                        system("cls") ;
+                        break ;
+                    }
+                    default :
+                    {
+                        system("cls") ;
+                        cout << "Nevermind, I'll Restart it myself" << endl ;
+                        break ;
+                    }
+                }
+                break ;
             }
         }
-    } while ( action != 'x' ); //THIS IS THE LOOP CONDITION - TOLD YA!
+    } while ( act1 != 'n' ); //THIS IS THE LOOP CONDITION - TOLD YA!
     return 0 ;
 }
